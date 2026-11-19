@@ -1,179 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zachary Mattis</title>
-<meta name="description" content="Zachary Mattis, cybersecurity and IT support professional in Stoystown, PA.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-/* Layout idea: one narrow column, a terminal-style label above each section, dense and scannable. */
-:root {
-  --bg: #f6f7f5;
-  --surface: #ffffff;
-  --ink: #16201e;
-  --muted: #55625f;
-  --line: #d9dfdc;
-  --accent: #0b6b5d;
-  --font-display: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
-  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0e1513; --surface: #151e1b; --ink: #e6ede9; --muted: #9aa8a3; --line: #263330; --accent: #4fd1b8;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0e1513; --surface: #151e1b; --ink: #e6ede9; --muted: #9aa8a3; --line: #263330; --accent: #4fd1b8;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body {
-  margin: 0; background: var(--bg); color: var(--ink);
-  font: 400 1.0625rem/1.65 var(--font-body);
-}
-a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 72px; display: flex; flex-direction: column; gap: 48px; }
-header { display: flex; flex-direction: column; gap: 12px; }
-.prompt { font: 500 0.8125rem/1 var(--font-display); color: var(--accent); letter-spacing: 0.02em; }
-h1 { margin: 0; font: 500 clamp(2rem, 6vw, 2.75rem)/1.1 var(--font-display); letter-spacing: -0.02em; text-wrap: balance; }
-.tagline { margin: 0; font-size: 1.1875rem; color: var(--muted); max-width: 60ch; text-wrap: pretty; }
-.links { display: flex; flex-wrap: wrap; gap: 8px 20px; font: 400 0.9375rem/1.4 var(--font-display); margin-top: 4px; }
-section { display: flex; flex-direction: column; gap: 16px; }
-h2 { margin: 0; font: 500 0.8125rem/1 var(--font-display); color: var(--accent); text-transform: lowercase; letter-spacing: 0.04em; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
-h2::before { content: "~/ "; color: var(--muted); }
-p { margin: 0; max-width: 65ch; text-wrap: pretty; }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
-.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; }
-.stat b { font: 500 1.5rem/1.2 var(--font-display); font-variant-numeric: tabular-nums; }
-.stat span { font-size: 0.875rem; color: var(--muted); }
-.item { display: flex; flex-direction: column; gap: 6px; }
-.item + .item { margin-top: 8px; }
-.row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; align-items: baseline; }
-.row h3 { margin: 0; font: 600 1.0625rem/1.4 var(--font-body); }
-.when { font: 400 0.8125rem/1.4 var(--font-display); color: var(--muted); font-variant-numeric: tabular-nums; }
-.org { color: var(--muted); font-size: 0.9375rem; }
-ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 6px; max-width: 65ch; }
-li::marker { color: var(--accent); }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; max-width: none; }
-.tags li { font: 400 0.8125rem/1.3 var(--font-display); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 5px 9px; }
-.tags li.progress { border-style: dashed; color: var(--muted); }
-.skills { display: grid; grid-template-columns: 1fr; gap: 12px; }
-.skills div { display: flex; flex-direction: column; gap: 2px; }
-.skills dt { font: 500 0.8125rem/1.4 var(--font-display); color: var(--muted); }
-.skills dd { margin: 0; }
-dl { margin: 0; }
-footer { font: 400 0.8125rem/1.5 var(--font-display); color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
-@media (min-width: 640px) { .skills div { flex-direction: row; gap: 16px; } .skills dt { width: 130px; flex: none; padding-top: 3px; } }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zachary Mattis</title>
+  <meta name="description" content="Zachary Mattis, cybersecurity and IT support professional in Stoystown, PA. Software, hardware and home lab projects.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/main.css">
 </head>
 <body>
-<div class="wrap">
-
-<header>
-  <div class="prompt">zachary@mattis:~$ whoami</div>
-  <h1>Zachary Mattis</h1>
-  <p class="tagline">Cybersecurity graduate (December 2026) with ten years of hands-on IT support. I find the slow, manual part of a process and replace it with something reliable.</p>
-  <div class="links">
-    <a href="mailto:zacharymmattis@gmail.com">zacharymmattis@gmail.com</a>
-    <a href="https://www.linkedin.com/in/zacharymattis-pa">linkedin.com/in/zacharymattis-pa</a>
-    <span>Stoystown, PA</span>
-  </div>
+<header class="c-header">
+  <div class="container"><div class="row"><div class="c-header__inner">
+    <div class="logo"><a class="logo__link" href="index.html">Zachary Mattis</a></div>
+    <nav class="main-nav">
+      <div class="main-nav__box">
+        <div class="nav__icon-close"><svg class="icon nav-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="nav__title">Menu</div>
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="projects/index.html" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="blog/index.html" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="index.html#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="social"><ul class="social__list list-reset">
+        <li class="social__item"><a class="social__link" href="https://www.linkedin.com/in/zacharymattis-pa" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+        <li class="social__item"><a class="social__link" href="mailto:zacharymmattis@gmail.com" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a></li>
+      </ul></div>
+    </nav>
+    <div class="nav-button"><svg class="icon nav__icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></div>
+  </div></div></div>
 </header>
 
-<section aria-labelledby="about">
-  <h2 id="about">about</h2>
-  <p>I run an IT support business for local clients, spent two years in a regulated banking environment, and built a Python tool that recovered more than $300,000 for an ecommerce company. I finish my B.A.Sc. in Cybersecurity Analytics and Operations at Penn State this December and I am looking for an entry-level security analyst or IT support role.</p>
-  <div class="stats">
-    <div class="stat"><b>3.87</b><span>GPA in major courses</span></div>
-    <div class="stat"><b>10+ yrs</b><span>hands-on IT support</span></div>
-    <div class="stat"><b>95%</b><span>client satisfaction</span></div>
-    <div class="stat"><b>&lt;90 sec</b><span>per dispute, down from hours</span></div>
-  </div>
+<section class="c-hero animate">
+  <div class="container"><div class="row"><div class="col col-12"><div class="c-hero__inner">
+    <div class="c-hero__left">
+      <h1 class="c-hero__title">Hi there, I'm Zachary Mattis</h1>
+      <div class="c-hero__description"><p><strong>Cybersecurity graduate</strong> and <strong>IT support professional</strong> from Stoystown, PA. I have ten years of hands-on support experience, and I build the tools I need, from Python automation to Mac apps to hardware. I fix what is slow, manual or broken.</p></div>
+      <div class="c-hero__btn">
+        <a href="#contact" class="cta-button c-button c-button--primary c-button--small">Get in touch</a>
+        <a class="works-button c-button c-button--secondary c-button--small" href="#projects"><span class="circle-bg"><svg class="icon button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span> See my projects</a>
+      </div>
+    </div>
+    <div class="c-hero__right"><div class="c-hero__image"><img src="images/headshot.jpg" alt="Portrait of Zachary Mattis"></div></div>
+  </div></div></div></div>
 </section>
 
-<section aria-labelledby="work">
-  <h2 id="work">selected work</h2>
-  <div class="item">
-    <div class="row"><h3>Amazon dispute automation</h3><span class="when">Wheeler Fleet Solutions, 2025–2026</span></div>
-    <p>A manual dispute process took hours per case. I taught myself Python and built a tool that watches the clipboard, parses EDI files, and annotates images, bringing each case to under 90 seconds.</p>
-    <ul>
-      <li>Filed 3,000+ disputes in six weeks.</li>
-      <li>Recovered $300,000+ in funds that were about to expire.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="row"><h3>Mattis &amp; Company</h3><span class="when">Owner, since 2015</span></div>
-    <p>My own IT support business. I support 50+ clients across Windows and Apple devices, smart homes, and small networks, and I document and follow up on every case.</p>
-  </div>
+<section class="section" id="about">
+  <div class="container"><div class="row"><div class="col col-12"><div class="contaniner__inner animate">
+    <div class="section__info">
+      <div class="section__head"><h2 class="section__title">About me</h2></div>
+      <div class="section__description"><p>I run an IT support business for local clients, spent two years in a regulated banking environment, and built a Python tool that recovered more than $300,000 for an ecommerce company. Outside of work I write Mac apps for the trivia and music bingo nights I run, host my own services at home, and 3D-print and wire the gear that makes those events easy to set up. I finish my B.A.Sc. in Cybersecurity Analytics and Operations at Penn State this December, and I am looking for an entry-level security analyst or IT support role.</p></div>
+    </div>
+    <div class="stats3">
+      <div><b>3.87</b><span>GPA in major courses</span></div>
+      <div><b>10+ years</b><span>hands-on IT support</span></div>
+      <div><b>95%</b><span>client satisfaction</span></div>
+      <div><b>&lt;90 sec</b><span>per dispute, down from about 5 minutes</span></div>
+    </div>
+  </div></div></div></div>
 </section>
 
-<section aria-labelledby="experience">
-  <h2 id="experience">experience</h2>
-  <div class="item">
-    <div class="row"><h3>Owner / IT Consultant</h3><span class="when">Jun 2015 – present</span></div>
-    <span class="org">Mattis &amp; Company, Stoystown, PA</span>
-    <ul>
-      <li>Diagnose and repair about 20 computers and smart devices a year.</li>
-      <li>Onboard clients to Microsoft 365, Google Workspace, and iCloud.</li>
-    </ul>
+<section class="section projects" id="projects">
+  <div class="container"><div class="row"><div class="col col-12"><div class="contaniner__inner animate">
+    <div class="section__info">
+      <div class="section__head"><h2 class="section__title">Projects</h2><a class="section__link" href="projects/index.html">View all <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="section__description"><p>Things I have built, and the problems behind them. Open any project for the full story.</p></div>
+    </div>
+    <div class="row"><article class="c-project-card col col-4 col-d-6 col-t-12">
+  <div class="c-project-card__content">
+    <a href="projects/waveform.html" class="c-project-card__image"><img loading="lazy" src="images/waveform-card.jpg" alt="WaveForm"></a>
+    <div class="c-project-card__info">
+      <div class="c-project-card__info-wrap"><h3 class="c-project-card__title">WaveForm</h3></div>
+      <div class="c-project-card__info-wrap"><div class="c-project-card__subtitle">Software · Python · Flask</div></div>
+    </div>
   </div>
-  <div class="item">
-    <div class="row"><h3>Ecommerce Data Analyst</h3><span class="when">Nov 2025 – Jul 2026</span></div>
-    <span class="org">Wheeler Fleet Solutions, Somerset, PA</span>
-    <ul><li>Kept product, pricing, and order data accurate across multiple platforms.</li></ul>
+</article>
+<article class="c-project-card col col-4 col-d-6 col-t-12">
+  <div class="c-project-card__content">
+    <a href="projects/trivianight.html" class="c-project-card__image"><img loading="lazy" src="images/trivianight-card.jpg" alt="TriviaNight"></a>
+    <div class="c-project-card__info">
+      <div class="c-project-card__info-wrap"><h3 class="c-project-card__title">TriviaNight</h3></div>
+      <div class="c-project-card__info-wrap"><div class="c-project-card__subtitle">Software · Swift · macOS</div></div>
+    </div>
   </div>
-  <div class="item">
-    <div class="row"><h3>Office Administrator</h3><span class="when">Dec 2024 – May 2025</span></div>
-    <span class="org">NextGen Alloy Recycling, Latrobe, PA</span>
-    <ul>
-      <li>Improved stock accuracy by 20% with new inventory practices.</li>
-      <li>Cut paperwork processing time by 30% with cross-team protocols.</li>
-    </ul>
+</article>
+<article class="c-project-card col col-4 col-d-6 col-t-12">
+  <div class="c-project-card__content">
+    <a href="projects/music-bingo.html" class="c-project-card__image"><img loading="lazy" src="images/music-bingo-card.jpg" alt="Music Bingo"></a>
+    <div class="c-project-card__info">
+      <div class="c-project-card__info-wrap"><h3 class="c-project-card__title">Music Bingo</h3></div>
+      <div class="c-project-card__info-wrap"><div class="c-project-card__subtitle">Software · Swift · macOS</div></div>
+    </div>
   </div>
-  <div class="item">
-    <div class="row"><h3>Financial Solutions Specialist</h3><span class="when">Jul 2022 – Sep 2024</span></div>
-    <span class="org">First Commonwealth Bank, Windber, PA</span>
-    <ul>
-      <li>Handled sensitive customer data under strict confidentiality and compliance standards.</li>
-      <li>First point of contact for account and system issues.</li>
-    </ul>
+</article>
+<article class="c-project-card col col-4 col-d-6 col-t-12">
+  <div class="c-project-card__content">
+    <a href="projects/dispute-automation.html" class="c-project-card__image"><img loading="lazy" src="images/dispute-automation-card.jpg" alt="Dispute automation"></a>
+    <div class="c-project-card__info">
+      <div class="c-project-card__info-wrap"><h3 class="c-project-card__title">Dispute automation</h3></div>
+      <div class="c-project-card__info-wrap"><div class="c-project-card__subtitle">Software · Python · Wheeler Fleet Solutions</div></div>
+    </div>
   </div>
-</section>
-
-<section aria-labelledby="education">
-  <h2 id="education">education and certifications</h2>
-  <div class="item">
-    <div class="row"><h3>B.A.Sc., Cybersecurity Analytics and Operations</h3><span class="when">Aug 2023 – Dec 2026</span></div>
-    <span class="org">Penn State University · Dean's List · 3.77 cumulative GPA</span>
+</article>
+<article class="c-project-card col col-4 col-d-6 col-t-12">
+  <div class="c-project-card__content">
+    <a href="projects/home-server.html" class="c-project-card__image"><img loading="lazy" src="images/home-server-card.jpg" alt="Oathgate home server"></a>
+    <div class="c-project-card__info">
+      <div class="c-project-card__info-wrap"><h3 class="c-project-card__title">Oathgate home server</h3></div>
+      <div class="c-project-card__info-wrap"><div class="c-project-card__subtitle">Home lab · Ubuntu Server · Containers</div></div>
+    </div>
   </div>
-  <ul class="tags" aria-label="Certifications">
-    <li>CompTIA A+ ce</li>
-    <li>CompTIA Tech+</li>
-    <li>Google IT Support</li>
-    <li>Google Cybersecurity</li>
-    <li>GDPR Compliance</li>
-    <li class="progress">CompTIA Security+ (in progress)</li>
-  </ul>
-</section>
-
-<section aria-labelledby="skills">
-  <h2 id="skills">skills</h2>
-  <dl class="skills">
-    <div><dt>Support</dt><dd>Troubleshooting, ticket documentation, device setup, onboarding workflows</dd></div>
-    <div><dt>Systems</dt><dd>Windows 10/11, macOS, iOS, Microsoft 365, Google Workspace, Active Directory concepts</dd></div>
-    <div><dt>Networking</dt><dd>Wi-Fi, router, and VPN troubleshooting, small-office setups</dd></div>
-    <div><dt>Security</dt><dd>Cybersecurity analytics, IAM fundamentals, GDPR</dd></div>
-    <div><dt>Automation</dt><dd>Python scripting, file parsing, data processing</dd></div>
-  </dl>
-</section>
-
-<footer>© 2026 Zachary Mattis</footer>
+</article>
+<article class="c-project-card col col-4 col-d-6 col-t-12">
+  <div class="c-project-card__content">
+    <a href="projects/obsidian-plugins.html" class="c-project-card__image"><img loading="lazy" src="images/obsidian-plugins-card.jpg" alt="Obsidian plugins"></a>
+    <div class="c-project-card__info">
+      <div class="c-project-card__info-wrap"><h3 class="c-project-card__title">Obsidian plugins</h3></div>
+      <div class="c-project-card__info-wrap"><div class="c-project-card__subtitle">Software · TypeScript · ElevenLabs API</div></div>
+    </div>
+  </div>
+</article>
 </div>
+  </div></div></div></div>
+</section>
+
+<section class="section" id="blog">
+  <div class="container"><div class="row"><div class="col col-12"><div class="contaniner__inner animate">
+    <div class="section__info">
+      <div class="section__head"><h2 class="section__title">Recent posts</h2><a class="section__link" href="blog/index.html">View all <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="section__description"><p>Notes on problems I ran into and what I learned from them.</p></div>
+    </div>
+    <div class="row"><div class="c-blog-card col col-4 col-d-6 col-t-12"><div class="c-blog-card__inner">
+  <div class="c-blog-card__image-wrap"><a class="c-blog-card__image" href="blog/broken-saw.html"><img loading="lazy" src="images/projector-power-supply-card.jpg" alt="The &quot;broken&quot; saw that became a projector power supply"></a></div>
+  <div class="c-blog-card__content">
+    <div class="c-blog-card__tags-box"><span class="c-blog-card__tag">Hardware</span><span class="c-blog-card__tag">3D Printing</span></div>
+    <h2 class="c-blog-card__title"><a href="blog/broken-saw.html">The &quot;broken&quot; saw that became a projector power supply</a></h2>
+    <p class="c-blog-card__excerpt">I thought I had broken a Craftsman V20 circular saw. It turned out the fix was small, but the parts found a better job.</p>
+    <div class="c-blog-card__meta"><div class="c-blog-card__author-image"><img loading="lazy" src="images/headshot.jpg" alt="Zachary Mattis"></div>
+      <div class="c-blog-card__info"><div class="c-blog-card__author-name">Zachary Mattis</div><span class="c-blog-card__date">November 18, 2026</span></div></div>
+  </div></div></div>
+<div class="c-blog-card col col-4 col-d-6 col-t-12"><div class="c-blog-card__inner">
+  <div class="c-blog-card__image-wrap"><a class="c-blog-card__image" href="blog/hello.html"><img loading="lazy" src="images/hero-monogram.jpg" alt="Hello, and what this site is"></a></div>
+  <div class="c-blog-card__content">
+    <div class="c-blog-card__tags-box"><span class="c-blog-card__tag">Personal</span><span class="c-blog-card__tag">Career</span></div>
+    <h2 class="c-blog-card__title"><a href="blog/hello.html">Hello, and what this site is</a></h2>
+    <p class="c-blog-card__excerpt">A short intro to this site, the projects on it, and what I am looking for next.</p>
+    <div class="c-blog-card__meta"><div class="c-blog-card__author-image"><img loading="lazy" src="images/headshot.jpg" alt="Zachary Mattis"></div>
+      <div class="c-blog-card__info"><div class="c-blog-card__author-name">Zachary Mattis</div><span class="c-blog-card__date">November 18, 2026</span></div></div>
+  </div></div></div>
+<div class="c-blog-card col col-4 col-d-6 col-t-12"><div class="c-blog-card__inner">
+  <div class="c-blog-card__image-wrap"><a class="c-blog-card__image" href="blog/tailscale-bookorbit.html"><img loading="lazy" src="images/home-server-card.jpg" alt="Getting my book server to work away from home"></a></div>
+  <div class="c-blog-card__content">
+    <div class="c-blog-card__tags-box"><span class="c-blog-card__tag">Home Lab</span><span class="c-blog-card__tag">Networking</span></div>
+    <h2 class="c-blog-card__title"><a href="blog/tailscale-bookorbit.html">Getting my book server to work away from home</a></h2>
+    <p class="c-blog-card__excerpt">BookOrbit worked great on my home network and not at all away from it. Tailscale was my fix, mostly.</p>
+    <div class="c-blog-card__meta"><div class="c-blog-card__author-image"><img loading="lazy" src="images/headshot.jpg" alt="Zachary Mattis"></div>
+      <div class="c-blog-card__info"><div class="c-blog-card__author-name">Zachary Mattis</div><span class="c-blog-card__date">November 18, 2026</span></div></div>
+  </div></div></div>
+</div>
+  </div></div></div></div>
+</section>
+
+<section class="section" id="experience">
+  <div class="container"><div class="row"><div class="col col-12"><div class="contaniner__inner animate">
+    <div class="section__info"><div class="section__head"><h2 class="section__title">Experience</h2></div></div>
+    <div class="cards3">
+      <div class="info-card wide"><h3>Owner / IT Consultant</h3><span class="when">Jun 2015 – present</span><span class="org">Mattis &amp; Company, Stoystown, PA</span>
+        <ul><li>Support 50+ local clients across Windows and Apple devices, smart homes and small networks, with a 95% satisfaction rate.</li><li>Diagnose and repair about 20 computers and smart devices a year, documenting and following up on each case.</li><li>Onboard clients to Microsoft 365, Google Workspace and iCloud.</li></ul></div>
+      <div class="info-card"><h3>Ecommerce Data Analyst</h3><span class="when">Nov 2025 – Jul 2026</span><span class="org">Wheeler Fleet Solutions, Somerset, PA</span>
+        <ul><li>Kept product, pricing and order data accurate across multiple platforms, and built the <a href="projects/dispute-automation.html">dispute automation</a>.</li></ul></div>
+      <div class="info-card"><h3>Office Administrator</h3><span class="when">Dec 2024 – May 2025</span><span class="org">NextGen Alloy Recycling, Latrobe, PA</span>
+        <ul><li>Improved stock accuracy by 20% with new inventory practices.</li><li>Cut paperwork processing time by 30% with cross-team protocols.</li></ul></div>
+      <div class="info-card wide"><h3>Financial Solutions Specialist</h3><span class="when">Jul 2022 – Sep 2024</span><span class="org">First Commonwealth Bank, Windber, PA</span>
+        <ul><li>Handled sensitive customer data under strict confidentiality and compliance standards.</li><li>First point of contact for account and system issues.</li></ul></div>
+    </div>
+  </div></div></div></div>
+</section>
+
+<section class="section" id="education">
+  <div class="container"><div class="row"><div class="col col-12"><div class="contaniner__inner animate">
+    <div class="section__info"><div class="section__head"><h2 class="section__title">Education and certifications</h2></div></div>
+    <div class="info-card"><h3>B.A.Sc., Cybersecurity Analytics and Operations</h3><span class="when">Aug 2023 – Dec 2026</span><span class="org">Penn State University · Dean's List · 3.77 cumulative GPA</span></div>
+    <ul class="chips" aria-label="Certifications"><li>CompTIA A+ ce</li><li>CompTIA Tech+</li><li>Google IT Support</li><li>Google Cybersecurity</li><li>GDPR Compliance</li><li class="progress">CompTIA Security+ (in progress)</li></ul>
+  </div></div></div></div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container"><div class="row"><div class="col col-12"><div class="contaniner__inner animate">
+    <div class="section__info"><div class="section__head"><h2 class="section__title">Skills</h2></div></div>
+    <div class="cards3">
+      <div class="info-card"><h3>Support</h3><span class="org">Troubleshooting, ticket documentation, device setup, onboarding workflows</span></div>
+      <div class="info-card"><h3>Systems</h3><span class="org">Windows 10/11, macOS, iOS, Ubuntu Server, Microsoft 365, Google Workspace, Active Directory concepts</span></div>
+      <div class="info-card"><h3>Networking</h3><span class="org">Wi-Fi, router and VPN troubleshooting, Tailscale, small-office setups</span></div>
+      <div class="info-card"><h3>Security</h3><span class="org">Cybersecurity analytics, IAM fundamentals, GDPR, self-hosted password manager and DNS filtering</span></div>
+      <div class="info-card"><h3>Development</h3><span class="org">Python, Swift, TypeScript, Flask, working with the Claude and ElevenLabs APIs</span></div>
+      <div class="info-card"><h3>Hardware</h3><span class="org">3D modeling and printing, audio and power wiring</span></div>
+    </div>
+  </div></div></div></div>
+</section>
+
+<section class="c-subscribe section contact-band" id="contact">
+  <div class="container"><div class="row"><div class="col col-12"><div class="c-subscribe__inner">
+    <div class="c-subscribe__info">
+      <h3 class="c-subscribe__title">Let's talk</h3>
+      <div class="c-subscribe__subtitle">I am looking for an entry-level security analyst or IT support role. Email or LinkedIn is the best way to reach me.</div>
+    </div>
+    <div class="contact-links">
+      <a class="c-button c-button--primary c-button--large" href="mailto:zacharymmattis@gmail.com">Email me</a>
+      <a class="c-button c-button--secondary c-button--large" href="https://www.linkedin.com/in/zacharymattis-pa">LinkedIn</a>
+    </div>
+  </div></div></div></div>
+</section>
+<div class="top" title="Top"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<footer class="footer">
+  <div class="container"><div class="row"><div class="col col-12">
+    <div class="social"><ul class="social__list list-reset">
+      <li class="social__item"><a class="social__link" href="https://www.linkedin.com/in/zacharymattis-pa" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+      <li class="social__item"><a class="social__link" href="mailto:zacharymmattis@gmail.com" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a></li>
+    </ul></div>
+    <ul class="footer_nav list-reset">
+      <li class="footer_nav__item"><a href="index.html" class="footer_nav__link">Home</a></li>
+      <li class="footer_nav__item"><a href="projects/index.html" class="footer_nav__link">Projects</a></li>
+      <li class="footer_nav__item"><a href="blog/index.html" class="footer_nav__link">Blog</a></li>
+      <li class="footer_nav__item"><a href="index.html#contact" class="footer_nav__link">Contact</a></li>
+    </ul>
+    <div class="copyright">© 2026 Zachary Mattis · Stoystown, PA<br>Built on the <a href="https://cloudcannon.com/templates/vonge/">Vonge</a> template by CloudCannon (MIT license).</div>
+  </div></div></div>
+</footer>
+<script src="js/site.js"></script>
 </body>
 </html>

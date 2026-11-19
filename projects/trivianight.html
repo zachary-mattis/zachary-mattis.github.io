@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TriviaNight – Zachary Mattis</title>
+  <meta name="description" content="A Mac app that uses Claude to write trivia rounds from a theme, then runs the whole game on a projector and a game master screen.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/main.css">
+</head>
+<body>
+<header class="c-header">
+  <div class="container"><div class="row"><div class="c-header__inner">
+    <div class="logo"><a class="logo__link" href="../index.html">Zachary Mattis</a></div>
+    <nav class="main-nav">
+      <div class="main-nav__box">
+        <div class="nav__icon-close"><svg class="icon nav-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="nav__title">Menu</div>
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="../projects/index.html" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="../blog/index.html" class="nav__link">Blog</a></li>
+          <li class="nav__item"><a href="../index.html#experience" class="nav__link">Experience</a></li>
+          <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="social"><ul class="social__list list-reset">
+        <li class="social__item"><a class="social__link" href="https://www.linkedin.com/in/zacharymattis-pa" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+        <li class="social__item"><a class="social__link" href="mailto:zacharymmattis@gmail.com" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a></li>
+      </ul></div>
+    </nav>
+    <div class="nav-button"><svg class="icon nav__icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></div>
+  </div></div></div>
+</header>
+
+<div class="container">
+  <div class="container"><div class="c-page-heading">
+    <h1 class="c-page-heading__title">TriviaNight</h1>
+    <p class="c-page-heading__description">A Swift app that writes trivia rounds from a theme and runs the whole game, used at Ponfeigh Distillery in Somerset, PA.</p>
+    <div class="badge-row page-heading-tags"><span>Software</span><span>Swift</span><span>macOS</span><span>Claude API</span></div>
+  </div></div>
+  <div class="container"><div class="row"><div class="col col-12"><div class="c-page-image animate"><img loading="lazy" src="../images/trivianight-wide.jpg" alt="TriviaNight"></div></div></div></div>
+  <div class="page animate">
+    <div class="glance"><h2 class="glance__title">At a glance</h2><dl><dt>Problem</dt><dd>Writing questions and running a trivia night by hand takes a lot of work.</dd><dt>Built with</dt><dd>Swift on macOS, with Claude generating the questions</dd><dt>Result</dt><dd>I give each round a theme, review the questions, and run the game from one app. In use at Ponfeigh Distillery.</dd></dl></div>
+    <div class="shots"><figure><img loading="lazy" src="../images/tn-library.jpg" alt="The game library on the game master&#x27;s screen. Each saved game shows when it was last played, with buttons to play the show, edit it, make a tile, or pull up the answer key."><figcaption>The game library on the game master&#x27;s screen. Each saved game shows when it was last played, with buttons to play the show, edit it, make a tile, or pull up the answer key.</figcaption></figure><figure><img loading="lazy" src="../images/tn-round.jpg" alt="A round title slide on the projector display: the round number, its theme, a short description and the points per question."><figcaption>A round title slide on the projector display: the round number, its theme, a short description and the points per question.</figcaption></figure><figure><img loading="lazy" src="../images/tn-question.jpg" alt="A multiple-choice question as the room sees it."><figcaption>A multiple-choice question as the room sees it.</figcaption></figure><figure><img loading="lazy" src="../images/tn-answer.jpg" alt="The answer reveal, with the correct choice highlighted and a one-line explanation underneath."><figcaption>The answer reveal, with the correct choice highlighted and a one-line explanation underneath.</figcaption></figure></div>
+    <h2>Why I built it</h2><p>I run trivia nights, and I wanted to stop building every game by hand. The goal was simple: give the app a theme for each round, get a full set of questions back, and run the game from the same place.</p><h2>Building a game</h2><p>For each round I enter a theme and the app uses Claude to research and write the questions. It can make multiple choice, true/false and write-in answers, with image and music questions coming soon. A step-by-step wizard walks through setting up the game. If a question or a whole round is not right, I regenerate it, or I edit it by hand. I can also pick a color theme.</p><h2>Running a game</h2><p>When the game starts, the app projects a slideshow on one screen and shows a game master screen on the other. From the game master screen I move between questions, control Spotify music between rounds, and keep score. The scorecard updates the slides live with the rankings and shows the final winners at the end.</p><h2>What came out of it</h2><p>Running it at venues where the projector had no convenient outlet led me to build a <a href="projector-power-supply.html">cordless projector power supply</a>.</p>
+  </div>
+  <div class="project__navigation animate">
+    <a class="project__prev" href="music-bingo.html">
+      <div class="project__box">
+        <span class="project__nav__info">Next project</span>
+        <h2 class="project__nav__title">Music Bingo<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></h2>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="top" title="Top"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></div>
+<footer class="footer">
+  <div class="container"><div class="row"><div class="col col-12">
+    <div class="social"><ul class="social__list list-reset">
+      <li class="social__item"><a class="social__link" href="https://www.linkedin.com/in/zacharymattis-pa" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+      <li class="social__item"><a class="social__link" href="mailto:zacharymmattis@gmail.com" aria-label="Email"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 7l8.5 6.5L20.5 7"/></svg></a></li>
+    </ul></div>
+    <ul class="footer_nav list-reset">
+      <li class="footer_nav__item"><a href="../index.html" class="footer_nav__link">Home</a></li>
+      <li class="footer_nav__item"><a href="../projects/index.html" class="footer_nav__link">Projects</a></li>
+      <li class="footer_nav__item"><a href="../blog/index.html" class="footer_nav__link">Blog</a></li>
+      <li class="footer_nav__item"><a href="../index.html#contact" class="footer_nav__link">Contact</a></li>
+    </ul>
+    <div class="copyright">© 2026 Zachary Mattis · Stoystown, PA<br>Built on the <a href="https://cloudcannon.com/templates/vonge/">Vonge</a> template by CloudCannon (MIT license).</div>
+  </div></div></div>
+</footer>
+<script src="../js/site.js"></script>
+</body>
+</html>
