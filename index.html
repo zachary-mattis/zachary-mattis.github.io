@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zachary Mattis</title>
+<meta name="description" content="Zachary Mattis, cybersecurity and IT support professional in Stoystown, PA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: one narrow column, a terminal-style label above each section, dense and scannable. */
+:root {
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --ink: #16201e;
+  --muted: #55625f;
+  --line: #d9dfdc;
+  --accent: #0b6b5d;
+  --font-display: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1513; --surface: #151e1b; --ink: #e6ede9; --muted: #9aa8a3; --line: #263330; --accent: #4fd1b8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1513; --surface: #151e1b; --ink: #e6ede9; --muted: #9aa8a3; --line: #263330; --accent: #4fd1b8;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--font-body);
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 72px; display: flex; flex-direction: column; gap: 48px; }
+header { display: flex; flex-direction: column; gap: 12px; }
+.prompt { font: 500 0.8125rem/1 var(--font-display); color: var(--accent); letter-spacing: 0.02em; }
+h1 { margin: 0; font: 500 clamp(2rem, 6vw, 2.75rem)/1.1 var(--font-display); letter-spacing: -0.02em; text-wrap: balance; }
+.tagline { margin: 0; font-size: 1.1875rem; color: var(--muted); max-width: 60ch; text-wrap: pretty; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 20px; font: 400 0.9375rem/1.4 var(--font-display); margin-top: 4px; }
+section { display: flex; flex-direction: column; gap: 16px; }
+h2 { margin: 0; font: 500 0.8125rem/1 var(--font-display); color: var(--accent); text-transform: lowercase; letter-spacing: 0.04em; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+h2::before { content: "~/ "; color: var(--muted); }
+p { margin: 0; max-width: 65ch; text-wrap: pretty; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; }
+.stat b { font: 500 1.5rem/1.2 var(--font-display); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 0.875rem; color: var(--muted); }
+.item { display: flex; flex-direction: column; gap: 6px; }
+.item + .item { margin-top: 8px; }
+.row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; align-items: baseline; }
+.row h3 { margin: 0; font: 600 1.0625rem/1.4 var(--font-body); }
+.when { font: 400 0.8125rem/1.4 var(--font-display); color: var(--muted); font-variant-numeric: tabular-nums; }
+.org { color: var(--muted); font-size: 0.9375rem; }
+ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 6px; max-width: 65ch; }
+li::marker { color: var(--accent); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; max-width: none; }
+.tags li { font: 400 0.8125rem/1.3 var(--font-display); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 5px 9px; }
+.tags li.progress { border-style: dashed; color: var(--muted); }
+.skills { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.skills div { display: flex; flex-direction: column; gap: 2px; }
+.skills dt { font: 500 0.8125rem/1.4 var(--font-display); color: var(--muted); }
+.skills dd { margin: 0; }
+dl { margin: 0; }
+footer { font: 400 0.8125rem/1.5 var(--font-display); color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+@media (min-width: 640px) { .skills div { flex-direction: row; gap: 16px; } .skills dt { width: 130px; flex: none; padding-top: 3px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="prompt">zachary@mattis:~$ whoami</div>
+  <h1>Zachary Mattis</h1>
+  <p class="tagline">Cybersecurity graduate (December 2026) with ten years of hands-on IT support. I find the slow, manual part of a process and replace it with something reliable.</p>
+  <div class="links">
+    <a href="mailto:zacharymmattis@gmail.com">zacharymmattis@gmail.com</a>
+    <a href="https://www.linkedin.com/in/zacharymattis-pa">linkedin.com/in/zacharymattis-pa</a>
+    <span>Stoystown, PA</span>
+  </div>
+</header>
+
+<section aria-labelledby="about">
+  <h2 id="about">about</h2>
+  <p>I run an IT support business for local clients, spent two years in a regulated banking environment, and built a Python tool that recovered more than $300,000 for an ecommerce company. I finish my B.A.Sc. in Cybersecurity Analytics and Operations at Penn State this December and I am looking for an entry-level security analyst or IT support role.</p>
+  <div class="stats">
+    <div class="stat"><b>3.87</b><span>GPA in major courses</span></div>
+    <div class="stat"><b>10+ yrs</b><span>hands-on IT support</span></div>
+    <div class="stat"><b>95%</b><span>client satisfaction</span></div>
+    <div class="stat"><b>&lt;90 sec</b><span>per dispute, down from hours</span></div>
+  </div>
+</section>
+
+<section aria-labelledby="work">
+  <h2 id="work">selected work</h2>
+  <div class="item">
+    <div class="row"><h3>Amazon dispute automation</h3><span class="when">Wheeler Fleet Solutions, 2025–2026</span></div>
+    <p>A manual dispute process took hours per case. I taught myself Python and built a tool that watches the clipboard, parses EDI files, and annotates images, bringing each case to under 90 seconds.</p>
+    <ul>
+      <li>Filed 3,000+ disputes in six weeks.</li>
+      <li>Recovered $300,000+ in funds that were about to expire.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><h3>Mattis &amp; Company</h3><span class="when">Owner, since 2015</span></div>
+    <p>My own IT support business. I support 50+ clients across Windows and Apple devices, smart homes, and small networks, and I document and follow up on every case.</p>
+  </div>
+</section>
+
+<section aria-labelledby="experience">
+  <h2 id="experience">experience</h2>
+  <div class="item">
+    <div class="row"><h3>Owner / IT Consultant</h3><span class="when">Jun 2015 – present</span></div>
+    <span class="org">Mattis &amp; Company, Stoystown, PA</span>
+    <ul>
+      <li>Diagnose and repair about 20 computers and smart devices a year.</li>
+      <li>Onboard clients to Microsoft 365, Google Workspace, and iCloud.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><h3>Ecommerce Data Analyst</h3><span class="when">Nov 2025 – Jul 2026</span></div>
+    <span class="org">Wheeler Fleet Solutions, Somerset, PA</span>
+    <ul><li>Kept product, pricing, and order data accurate across multiple platforms.</li></ul>
+  </div>
+  <div class="item">
+    <div class="row"><h3>Office Administrator</h3><span class="when">Dec 2024 – May 2025</span></div>
+    <span class="org">NextGen Alloy Recycling, Latrobe, PA</span>
+    <ul>
+      <li>Improved stock accuracy by 20% with new inventory practices.</li>
+      <li>Cut paperwork processing time by 30% with cross-team protocols.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><h3>Financial Solutions Specialist</h3><span class="when">Jul 2022 – Sep 2024</span></div>
+    <span class="org">First Commonwealth Bank, Windber, PA</span>
+    <ul>
+      <li>Handled sensitive customer data under strict confidentiality and compliance standards.</li>
+      <li>First point of contact for account and system issues.</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="education">
+  <h2 id="education">education and certifications</h2>
+  <div class="item">
+    <div class="row"><h3>B.A.Sc., Cybersecurity Analytics and Operations</h3><span class="when">Aug 2023 – Dec 2026</span></div>
+    <span class="org">Penn State University · Dean's List · 3.77 cumulative GPA</span>
+  </div>
+  <ul class="tags" aria-label="Certifications">
+    <li>CompTIA A+ ce</li>
+    <li>CompTIA Tech+</li>
+    <li>Google IT Support</li>
+    <li>Google Cybersecurity</li>
+    <li>GDPR Compliance</li>
+    <li class="progress">CompTIA Security+ (in progress)</li>
+  </ul>
+</section>
+
+<section aria-labelledby="skills">
+  <h2 id="skills">skills</h2>
+  <dl class="skills">
+    <div><dt>Support</dt><dd>Troubleshooting, ticket documentation, device setup, onboarding workflows</dd></div>
+    <div><dt>Systems</dt><dd>Windows 10/11, macOS, iOS, Microsoft 365, Google Workspace, Active Directory concepts</dd></div>
+    <div><dt>Networking</dt><dd>Wi-Fi, router, and VPN troubleshooting, small-office setups</dd></div>
+    <div><dt>Security</dt><dd>Cybersecurity analytics, IAM fundamentals, GDPR</dd></div>
+    <div><dt>Automation</dt><dd>Python scripting, file parsing, data processing</dd></div>
+  </dl>
+</section>
+
+<footer>© 2026 Zachary Mattis</footer>
+</div>
+</body>
+</html>
